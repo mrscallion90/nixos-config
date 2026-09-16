@@ -1,7 +1,14 @@
-Setup (I think can be done in live enviroment of Minimal NixOS image)
+Setup (assumes from base of graphical install of plasma)
 nix-shell -p git
 git clone https://github.com/mrscallion90/nixos-config .
 nixos-rebuild --upgrade switch -I ./nixos-config/configuration.nix
+
+afterwards, to edit and rebuild just
+nixos-config
+nixos-rebuild-shortcut
+
+if seems fine then, save it in on github:
+lazygit or lg
 
 to update, just use:
 nix-channel --add <link> nixos
