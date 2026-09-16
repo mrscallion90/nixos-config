@@ -32,6 +32,9 @@ in
   # For the fish shell :)
   programs.fish.enable=true;
 
+  # Also use system packages as well
+  home-manager.useGlobalPkgs = true;
+
   # Home manager
   home-manager.users.user = { pkgs, ... }: {
     # Programs with no configs
