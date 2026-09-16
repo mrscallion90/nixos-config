@@ -1,5 +1,6 @@
 Setup (I think can be done in live enviroment of Minimal NixOS image)
-git clone https://github.com/mrscallion90/nixos-config /home/user
+nix-shell -p git
+git clone https://github.com/mrscallion90/nixos-config .
 nixos-rebuild --upgrade switch -I nixos-config=/home/user/nixos-config/configuration.nix
 
 [TODO] Command tree, explaining what each file does etc
@@ -9,6 +10,7 @@ nix-collect-garbage -d is only for the machine/system level
 user level/home manager level is separate, needs to be cleaned as well
 
 TODO:
+[ ] Put disko for disk volumes as well
 [ ] Setup secure boot
 [x] Fix mic, noise cancellation and dB overboost
 [ ] Home manager, or at least user wide configs
