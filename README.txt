@@ -3,6 +3,9 @@ nix-shell -p git
 git clone https://github.com/mrscallion90/nixos-config .
 nixos-rebuild --upgrade switch -I ./nixos-config/configuration.nix
 
+to update, just use:
+nix-channel --add <link> nixos
+
 [TODO] Command tree, explaining what each file does etc
 
 [INFO]
