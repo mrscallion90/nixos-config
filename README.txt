@@ -1,6 +1,6 @@
-Hi future me:
-
-Make sure to put how to install this setup (commands)
+Setup
+git clone https://github.com/mrscallion90/nixos-config /home/user
+nixos-rebuild --upgrade switch -I nixos-config=/home/user/nixos-config/configuration.nix # theres a shortcut in fish for this
 
 Command tree, explaining what each file does etc
 
@@ -25,7 +25,7 @@ TODO:
 
 [x] Progress bar for nixos-rebuild (nix-output-monitor)
 [x] Spoof MAC Address on WiFi per connection
-[ ] Spoof hostname as well on each reboot
+[ ] Spoof hostname as well on each boot
 [x] Battery
 [x] Bluetooth
 [ ] Mouse Acceleration Disable
