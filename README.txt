@@ -2,7 +2,11 @@ Setup (I think can be done in live enviroment of Minimal NixOS image)
 git clone https://github.com/mrscallion90/nixos-config /home/user
 nixos-rebuild --upgrade switch -I nixos-config=/home/user/nixos-config/configuration.nix
 
-Command tree, explaining what each file does etc
+[TODO] Command tree, explaining what each file does etc
+
+[INFO]
+nix-collect-garbage -d is only for the machine/system level
+user level/home manager level is separate, needs to be cleaned as well
 
 TODO:
 [ ] Setup secure boot
@@ -20,6 +24,7 @@ TODO:
 		[ ] Try to make Helix keybinds
 		[ ] Try to make Helix editing modal
 [ ] Fish commands
+	[ ] NixOS fish alias "nixos-rebuild-shortcut" doesnt work, maybe home manager related fix/issue
 	[ ] doas nixos-rebuild $(echo "switch \n boot \n dry-activate" | fzf) --flake ./configuration.nix
 		- or xargs?
 
