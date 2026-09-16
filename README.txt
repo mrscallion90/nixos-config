@@ -1,6 +1,6 @@
-Setup
+Setup (I think can be done in live enviroment of Minimal NixOS image)
 git clone https://github.com/mrscallion90/nixos-config /home/user
-nixos-rebuild --upgrade switch -I nixos-config=/home/user/nixos-config/configuration.nix # theres a shortcut in fish for this
+nixos-rebuild --upgrade switch -I nixos-config=/home/user/nixos-config/configuration.nix
 
 Command tree, explaining what each file does etc
 
