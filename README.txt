@@ -1,3 +1,8 @@
+README
+
+one day, u copy this setup:
+https://youtu.be/aNgujRXDTdE
+
 Setup (assumes from base of graphical install of plasma)
 nix-shell -p git
 git clone https://github.com/mrscallion90/nixos-config .
