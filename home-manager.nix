@@ -9,6 +9,7 @@ in
     [
       "${home-manager}/nixos"
     ];
+
   nixpkgs.config = {
     # Allow unfree packages
     allowUnfree = true;
@@ -67,6 +68,7 @@ in
 
     # Programs with config (in their own directory maybe?)
     programs.fish = {
+      enable = true; # Need this to load the config below, dunno why but yeah
       interactiveShellInit = ''
         set fish_greeting # Disable greeting
 
