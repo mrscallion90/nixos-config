@@ -6,6 +6,10 @@ nixos-rebuild --upgrade switch -I ./nixos-config/configuration.nix
 to update, just use:
 nix-channel --add <link> nixos
 
+to clean, run:
+nix-collect-garbage -d
+nix optimize-store
+
 [TODO] Command tree, explaining what each file does etc
 
 [INFO]
@@ -17,7 +21,7 @@ TODO:
 [ ] Setup secure boot
 [x] Fix mic, noise cancellation and dB overboost
 [ ] Home manager, or at least user wide configs
-	- [ ] Port fish,tmux, neovim and user packages into Home Manager + plus KDE plasma as well
+	- [x] Port fish,tmux, neovim and user packages into Home Manager + plus KDE plasma as well
 	- [ ] Configure plasma shell taskbar
 	- [ ] Configure plasma theme
 	- [ ] Tmux + TPM
@@ -29,7 +33,7 @@ TODO:
 		[ ] Try to make Helix keybinds
 		[ ] Try to make Helix editing modal
 [ ] Fish commands
-	[ ] NixOS fish alias "nixos-rebuild-shortcut" doesnt work, maybe home manager related fix/issue
+	[x] NixOS fish alias "nixos-rebuild-shortcut" doesnt work, maybe home manager related fix/issue
 	[ ] doas nixos-rebuild $(echo "switch \n boot \n dry-activate" | fzf) --flake ./configuration.nix
 		- or xargs?
 

@@ -9,18 +9,21 @@ in
     [
       "${home-manager}/nixos"
     ];
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # Allow unstable packages
   nixpkgs.config = {
+    # Allow unfree packages
+    allowUnfree = true;
+
+    # Allow unstable packages
     packageOverrides = pkgs: {
       unstable = import unstableTarball {
         config = config.nixpkgs.config;
       };
     };
   };
+
+  # Auto cleanup/garbage collector I think?
+  services.home-manager.autoExpire.store.cleanup = true;
+
 
   # User setup
   users.users.user = {
@@ -37,35 +40,43 @@ in
 
   # Home manager
   home-manager.users.user = { pkgs, ... }: {
-    # Programs with no configs
-    home.packages = with pkgs; [
-      # Packages in root enviroment already: helix, tmux
-      # unstable.pkg
-      # Work
-      libreoffice-still
+    home = {
+      # Enviroment variables
+      sessionVariables = {
+        EDITOR = "hx";
+      };   
 
-      # Internet
-      librewolf brave
+      # Programs with no configs
+      packages = with pkgs; [
+        # Packages in root enviroment already: helix, tmux
+        # unstable.pkg
+        # Work
+        libreoffice-still
 
-      # CLI Stuff
-      mpv yt-dlp ffmpeg
-      tree fzf wl-clipboard
+        # Internet
+        librewolf brave
 
-      # Password Manager
-      bitwarden-desktop
+        # CLI Stuff
+        mpv yt-dlp ffmpeg
+        tree fzf wl-clipboard
+        zoxide
 
-      # Development
-      lazygit git
-    ];
+        # Password Manager
+        bitwarden-desktop
+
+        # Development
+        lazygit git
+      ];
+    };
 
     # Programs with config (in their own directory maybe?)
     programs.fish = {
-      enable = true;
       interactiveShellInit = ''
         set fish_greeting # Disable greeting
 
         # nixos stuff
-        alias nixos-rebuild-shortcut="doas nixos-rebuild --upgrade switch -I nixos-config=/home/user/nixos-config/configuration.nix"
+        alias nixos-rebuild-shortcut="doas nixos-rebuild --upgrade switch -I nixos-config=$HOME/nixos-config/configuration.nix"
+        alias nixos-config="$EDITOR $HOME/nixos-config"
 
         # Helper
         alias lg="lazygit"
