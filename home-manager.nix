@@ -75,7 +75,7 @@ in
         set fish_greeting # Disable greeting
 
         # nixos stuff
-        alias nixos-rebuild-shortcut="doas nixos-rebuild --upgrade switch -I nixos-config=$HOME/nixos-config/configuration.nix"
+        alias nixos-rebuild-shortcut="doas nixos-rebuild switch -I nixos-config=$HOME/nixos-config/configuration.nix"
         alias nixos-config="$EDITOR $HOME/nixos-config"
 
         # Helper

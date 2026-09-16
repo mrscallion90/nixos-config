@@ -14,6 +14,8 @@ nixos-rebuild --upgrade switch -I ./nixos-config/configuration.nix
 afterwards, to edit and rebuild just
 nixos-config
 nixos-rebuild-shortcut
+or
+nixos-rebuild-shortcut --upgrade
 
 if seems fine then, save it in on github:
 lazygit or lg

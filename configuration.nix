@@ -124,6 +124,9 @@
     '';
   };
 
+  # Nix-command & flakes is still in beta despite widely used so uhh..
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # Garbage collector
   nix.gc = {
     automatic = true;
