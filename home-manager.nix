@@ -37,6 +37,7 @@ in
     # Programs with no configs
     home.packages = with pkgs; [
       # Packages in root enviroment already: helix, tmux
+      # unstable.pkg
       # Work
       libreoffice-still
 
@@ -56,6 +57,7 @@ in
 
     # Programs with config (in their own directory maybe?)
     programs.fish = {
+      enable = true;
       interactiveShellInit = ''
         set fish_greeting # Disable greeting
 
