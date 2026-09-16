@@ -1,5 +1,4 @@
 { config, pkgs, lib, ... }:
-
 let
   home-manager    = builtins.fetchTarball https://github.com/nix-community/home-manager/archive/release-26.05.tar.gz;
   unstableTarball = builtins.fetchTarball https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz;
@@ -63,6 +62,9 @@ in
 
         # Development
         lazygit git
+
+        # Gaming
+        steam lutris protonplus
       ];
     };
 
