@@ -19,8 +19,6 @@
       accelProfile = "flat";   # Disables mouse acceleration
     };
   };
-  
-  
 
   # Enable CUPS to print documents.
   services.printing.enable = true;

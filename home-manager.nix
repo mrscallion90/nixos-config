@@ -21,10 +21,6 @@ in
     };
   };
 
-  # Auto cleanup/garbage collector I think?
-  services.home-manager.autoExpire.store.cleanup = true;
-
-
   # User setup
   users.users.user = {
     isNormalUser = true;
