@@ -51,8 +51,7 @@ in
 	# School
 	wine
 	cisco-packet-tracer_9
-	blender # Godot is a standalone binary so lets just use that as is
-
+	blender godot_4_7 # u just change godot version manually
         # Work
         libreoffice-still
 

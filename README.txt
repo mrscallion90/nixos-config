@@ -38,6 +38,9 @@ TODO:
 [ ] networkmanager config on nixos that reconnects VPN after each wifi connection
 [ ] Put disko for disk volumes as well
 [ ] Setup secure boot
+[ ] Spoof hostname as well on each boot
+[ ] Mouse Acceleration Disable
+
 [ ] Home manager, or at least user wide configs
 	- [ ] Configure plasma shell taskbar
 	- [ ] Configure plasma theme
@@ -46,17 +49,16 @@ TODO:
 		[ ] Yank mode
 		[ ] floax (floating window)
 		[ ] Tmuxifier (saves panes/session preset)
-[ ] Fish commands
+[ ] Fish alias
 	[ ] doas nixos-rebuild $(echo "switch \n boot \n dry-activate" | fzf) --flake ./configuration.nix
 		- or xargs?
 
-[ ] Spoof hostname as well on each boot
-[ ] Mouse Acceleration Disable
-FYP SETUP (flake)
-[ ] Godot
-[ ] Blender
 
 [DONE]
+FYP SETUP (flake) {nobody on my team gonna use flake, better lock it to a version through nixos anyway}
+[x] Godot
+[x] Blender
+
 [x] Wine setup
 	- [x] Cisco Packet Tracer (theres native built version, it works, have to fetch the binaries yourself for nixos)
 	- [x] Davinci Look Timetable (wine setup in ~/misc/ which is cursed since its not reproducible but pushing binaries is a nono)
