@@ -174,7 +174,7 @@ in
       -- LSP actions
       map("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
       map("n", "gr", vim.lsp.buf.references, { desc = "Find references" })
-      map("n", "K", vim.lsp.buf.hover, { desc = "Hover documentation" })
+      map("n", "<leader>k", vim.lsp.buf.hover, { desc = "Hover documentation" })
       map("n", "<leader>a", vim.lsp.buf.code_action, { desc = "Code action" })
       map("n", "<leader>r", vim.lsp.buf.rename, { desc = "Rename symbol" })
 
