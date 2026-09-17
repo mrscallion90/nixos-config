@@ -50,15 +50,15 @@ TODO:
 
 [ ] Spoof hostname as well on each boot
 [ ] Mouse Acceleration Disable
-[ ] Wine setup for (maybe scripts at best)
-	- [ ] Cisco Packet Tracer
-	- [ ] Davinci Look Timetable
-
 FYP SETUP (flake)
 [ ] Godot
 [ ] Blender
 
 [DONE]
+[x] Wine setup
+	- [x] Cisco Packet Tracer (theres native built version, it works, have to fetch the binaries yourself for nixos)
+	- [x] Davinci Look Timetable (wine setup in ~/misc/ which is cursed since its not reproducible but pushing binaries is a nono)
+
 Programs to install/setup:
 [x] Mullvad VPN GUI
 [x] Bitwarden
