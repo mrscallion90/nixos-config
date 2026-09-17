@@ -62,6 +62,8 @@ in
 
         # Development
         lazygit git
+		# Neovim LSP
+		superhtml
 
         # Gaming
         steam lutris protonplus
@@ -81,6 +83,7 @@ in
         # Helper
         alias lg="lazygit"
         alias xo="xdg-open"
+		alias cd="z"
 
         # Mullvad
         alias mullvad-on='mullvad lockdown-mode set on && mullvad connect'
@@ -108,6 +111,9 @@ in
                 tmux new-session -s larp
             end
         end
+
+		# Zoxide needs this at end of file
+		zoxide init fish | source
       '';
     };
 
@@ -115,6 +121,49 @@ in
       enable = true;
       viAlias = true;
       vimAlias = true;
+      initLua = ''
+      vim.opt.number = true
+      vim.opt.wrap = false
+      vim.opt.tabstop = 2
+      vim.opt.swapfile = false
+      vim.opt.signcolumn = "yes"
+      vim.cmd(":hi statusline guibg=NONE") -- Transparent status line
+			vim.g.mapleader=" "
+
+      -- Keybinds
+      vim.keymap.set('n', '<leader>f', ':Pick files<CR>')
+      vim.keymap.set('n', '<leader>F', ':Pick grep<CR>')
+      vim.keymap.set('n', '<leader>w', ':HopWord<CR>')
+      
+      -- Plugin load
+      vim.pack.add(
+        {
+          {src="https://github.com/vague2k/vague.nvim"}, -- Colorscheme
+          {src="https://github.com/neovim/nvim-lspconfig"}, -- Pre-configured LSP settings
+          {src="https://github.com/stevearc/oil.nvim"}, -- Emacs-like file picker
+          {src="https://github.com/nvim-mini/mini.pick", version="stable" }, -- File picker and grep picker
+					{src="https://github.com/nvim-mini/mini.completion"}, -- Auto completion and LSP. nvim-mini series!!! :D
+					{src="https://github.com/smoka7/hop.nvim"} -- Press two characters first of a word to jump to
+        }
+      )
+
+
+      -- Plugin setup/config
+      vim.cmd("colorscheme vague")
+	  
+      require("mini.pick").setup()
+      require("mini.completion").setup()
+
+      require("hop").setup()
+
+      -- LSP Load (nvim-lspconfig)
+      -- LSP is installed using Home Manager
+      vim.lsp.enable(
+        {
+          "superhtml",
+        }
+      )
+      '';
     };
 
     # The state version is required and should stay at the version you
