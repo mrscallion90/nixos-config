@@ -46,6 +46,10 @@ in
       packages = with pkgs; [
         # Packages in root enviroment already: helix, tmux
         # unstable.pkg
+
+	# School
+	cisco-packet-tracer_9
+
         # Work
         libreoffice-still
 
@@ -62,8 +66,8 @@ in
 
         # Development
         lazygit git
-		# Neovim LSP
-		superhtml
+	# Neovim LSP
+	superhtml
 
         # Gaming
         steam lutris protonplus
