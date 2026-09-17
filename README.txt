@@ -25,7 +25,6 @@ nix-channel --add <link> nixos
 
 to clean, run:
 nix-collect-garbage -d
-nix optimize-store
 
 [TODO] Command tree, explaining what each file does etc
 
