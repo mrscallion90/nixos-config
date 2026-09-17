@@ -35,6 +35,18 @@ nix-collect-garbage -d is only for the machine/system level
 user level/home manager level is separate, needs to be cleaned as well
 
 TODO:
+
+new file tree:
+configuration.nix
+hardware.nix
+home-manager/
+home-manager/init.nix # import this in configuration.nix
+home-manager/dev/neovim.nix
+home-manager/dev/fish.nix
+
+
+
+
 [ ] networkmanager config on nixos that reconnects VPN after each wifi connection
 [ ] Put disko for disk volumes as well
 [ ] Setup secure boot
