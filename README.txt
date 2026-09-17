@@ -37,6 +37,7 @@ user level/home manager level is separate, needs to be cleaned as well
 TODO:
 
 new file tree:
+dotenv.nix # where the nixos config lives or ./misc etc
 configuration.nix
 hardware.nix
 home-manager/
