@@ -42,12 +42,20 @@ in
         EDITOR = "hx";
       };   
 
+      
+      pkgs.writeShellScript "run-davinci.sh"
+      ''
+      #!/usr/bin/bash
+      	
+      '';
+
       # Programs with no configs
       packages = with pkgs; [
         # Packages in root enviroment already: helix, tmux
         # unstable.pkg
 
 	# School
+	wine
 	cisco-packet-tracer_9
 
         # Work
@@ -140,26 +148,6 @@ in
       local map = vim.keymap.set
       local opts = { noremap = true, silent = true }
 
-      -- Exit insert mode like Helix
-      map("i", "jk", "<Esc>", opts)
-      map("i", "kj", "<Esc>", opts)
-
-      -- Selection-oriented editing
-      map("n", "x", "V", { desc = "Select line" })
-      map("x", "x", "V", { desc = "Select line" })
-
-      map("n", "w", "viw", { desc = "Select word" })
-      map("n", "W", "viW", { desc = "Select WORD" })
-
-      map("n", "e", "v$", { desc = "Select to end of line" })
-      map("n", "E", "v0", { desc = "Select to start of line" })
-
-      -- Apply actions to the current selection
-      map("x", "d", "d", { desc = "Delete selection" })
-      map("x", "c", "c", { desc = "Change selection" })
-      map("x", "y", "y", { desc = "Yank selection" })
-      map("x", "p", "p", { desc = "Paste after selection" })
-
       -- Keep the selection after indenting
       map("x", "<", "<gv", opts)
       map("x", ">", ">gv", opts)
@@ -169,7 +157,7 @@ in
       map("n", "<C-q>", "<cmd>quit<cr>", { desc = "Quit" })
 
       -- File navigation
-      map("n", "gh", "0", { desc = "Start of line" })
+      map("n", "gh", "0", { desc = "Start of line" }) -- This one is used by mini.diff, figure that out
       map("n", "gl", "$", { desc = "End of line" })
       map("n", "gs", "^", { desc = "First word of line" })
       map("n", "ge", "G", { desc = "End of file" })
