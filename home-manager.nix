@@ -42,13 +42,6 @@ in
         EDITOR = "hx";
       };   
 
-      
-      pkgs.writeShellScript "run-davinci.sh"
-      ''
-      #!/usr/bin/bash
-      	
-      '';
-
       # Programs with no configs
       packages = with pkgs; [
         # Packages in root enviroment already: helix, tmux
@@ -81,12 +74,15 @@ in
         steam lutris protonplus
       ];
     };
-
+      
     # Programs with config (in their own directory maybe?)
     programs.fish = {
       enable = true; # Need this to load the config below, dunno why but yeah
       interactiveShellInit = ''
         set fish_greeting # Disable greeting
+
+	#school stuff
+	# alias davinci-look="wine ~/nixos-config/misc/" # WIP
 
         # nixos stuff
         alias nixos-rebuild-shortcut="doas nixos-rebuild switch -I nixos-config=$HOME/nixos-config/configuration.nix"
