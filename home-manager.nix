@@ -121,29 +121,78 @@ in
       enable = true;
       viAlias = true;
       vimAlias = true;
+
       initLua = ''
       vim.opt.number = true
       vim.opt.wrap = false
-      vim.opt.tabstop = 2
+      -- vim.opt.tabwidth = 2
       vim.opt.swapfile = false
       vim.opt.signcolumn = "yes"
       vim.cmd(":hi statusline guibg=NONE") -- Transparent status line
-			vim.g.mapleader=" "
+      vim.g.mapleader=" "
 
       -- Keybinds
-      vim.keymap.set('n', '<leader>f', ':Pick files<CR>')
-      vim.keymap.set('n', '<leader>F', ':Pick grep<CR>')
-      vim.keymap.set('n', '<leader>w', ':HopWord<CR>')
+      -- Helix-like keybinds
+      local map = vim.keymap.set
+      local opts = { noremap = true, silent = true }
+
+      -- Exit insert mode like Helix
+      map("i", "jk", "<Esc>", opts)
+      map("i", "kj", "<Esc>", opts)
+
+      -- Selection-oriented editing
+      map("n", "x", "V", { desc = "Select line" })
+      map("x", "x", "V", { desc = "Select line" })
+
+      map("n", "w", "viw", { desc = "Select word" })
+      map("n", "W", "viW", { desc = "Select WORD" })
+
+      map("n", "e", "v$", { desc = "Select to end of line" })
+      map("n", "E", "v0", { desc = "Select to start of line" })
+
+      -- Apply actions to the current selection
+      map("x", "d", "d", { desc = "Delete selection" })
+      map("x", "c", "c", { desc = "Change selection" })
+      map("x", "y", "y", { desc = "Yank selection" })
+      map("x", "p", "p", { desc = "Paste after selection" })
+
+      -- Keep the selection after indenting
+      map("x", "<", "<gv", opts)
+      map("x", ">", ">gv", opts)
+
+      -- Helix-like save and quit
+      map("n", "<C-s>", "<cmd>write<cr>", { desc = "Save" })
+      map("n", "<C-q>", "<cmd>quit<cr>", { desc = "Quit" })
+
+      -- File navigation
+      map("n", "gh", "0", { desc = "Start of line" })
+      map("n", "gl", "$", { desc = "End of line" })
+      map("n", "gs", "^", { desc = "First word of line" })
+      map("n", "ge", "G", { desc = "End of file" })
+      map("n", "gg", "gg", { desc = "Start of file" })
+
+      -- LSP actions
+      map("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+      map("n", "gr", vim.lsp.buf.references, { desc = "Find references" })
+      map("n", "K", vim.lsp.buf.hover, { desc = "Hover documentation" })
+      map("n", "<leader>a", vim.lsp.buf.code_action, { desc = "Code action" })
+      map("n", "<leader>r", vim.lsp.buf.rename, { desc = "Rename symbol" })
+
       
       -- Plugin load
       vim.pack.add(
         {
           {src="https://github.com/vague2k/vague.nvim"}, -- Colorscheme
           {src="https://github.com/neovim/nvim-lspconfig"}, -- Pre-configured LSP settings
-          {src="https://github.com/stevearc/oil.nvim"}, -- Emacs-like file picker
-          {src="https://github.com/nvim-mini/mini.pick", version="stable" }, -- File picker and grep picker
-					{src="https://github.com/nvim-mini/mini.completion"}, -- Auto completion and LSP. nvim-mini series!!! :D
-					{src="https://github.com/smoka7/hop.nvim"} -- Press two characters first of a word to jump to
+          {src="https://github.com/stevearc/oil.nvim"}, -- Emacs-like file explorer
+      	  {src="https://github.com/smoka7/hop.nvim"}, -- Press two characters first of a word to jump to
+      	  -- Mini series
+          {src="https://github.com/nvim-mini/mini.pick",       version="stable" }, -- File picker and grep picker
+      	  {src="https://github.com/nvim-mini/mini.completion", version="stable"},  -- Auto completion and LSP
+      	  {src='https://github.com/nvim-mini/mini.comment',    version="stable"}, 
+      	  {src='https://github.com/nvim-mini/mini.diff',       version="stable"},  -- Required for mini.git
+      	  {src='https://github.com/nvim-mini/mini.notify',     version="stable"},  -- Required for mini.git
+      	  {src='https://github.com/nvim-mini/mini-git',        version="stable"}   -- Productivity, maybe? I am used to lazygit
         }
       )
 
@@ -153,8 +202,20 @@ in
 	  
       require("mini.pick").setup()
       require("mini.completion").setup()
+      require("mini.diff").setup() -- Required for mini.git
+      require("mini.notify").setup() -- Required for mini.git
+      require("mini.git").setup()
+
+      require('mini.comment').setup()
+      require('mini.comment').config = { comment="<C-c>" }
 
       require("hop").setup()
+			
+      -- Plugins keybinds
+      map('n', '<leader>f', ':Pick files<CR>')
+      map('n', '<leader>F', ':Pick grep<CR>')
+      map('n', '<leader>w', ':HopWord<CR>')
+
 
       -- LSP Load (nvim-lspconfig)
       -- LSP is installed using Home Manager

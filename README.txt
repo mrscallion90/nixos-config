@@ -44,9 +44,9 @@ TODO:
 		[ ] Yank mode
 		[ ] floax (floating window)
 		[ ] Tmuxifier (saves panes/session preset)
-	- [ ] Try nvim with NixOS
-		[ ] Try to make Helix keybinds
-		[ ] Try to make Helix editing modal
+	- [x] Try nvim with NixOS
+		[x] Try to make Helix keybinds
+		[x] Try to make Helix editing modal
 [ ] Fish commands
 	[ ] doas nixos-rebuild $(echo "switch \n boot \n dry-activate" | fzf) --flake ./configuration.nix
 		- or xargs?
