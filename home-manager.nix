@@ -39,7 +39,8 @@ in
     home = {
       # Enviroment variables
       sessionVariables = {
-        EDITOR = "hx";
+        # EDITOR = "hx";
+        EDITOR = "nvim";
       };   
 
       # Programs with no configs
@@ -50,7 +51,7 @@ in
 	# School
 	wine
 	cisco-packet-tracer_9
-	godot blender
+	blender # Godot is a standalone binary so lets just use that as is
 
         # Work
         libreoffice-still
