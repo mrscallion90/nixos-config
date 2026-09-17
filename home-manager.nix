@@ -210,6 +210,7 @@ in
       require('mini.comment').config = { comment="<C-c>" }
 
       require("hop").setup()
+      require("oil").setup()
 			
       -- Plugins keybinds
       map('n', '<leader>f', ':Pick files<CR>')
