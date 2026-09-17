@@ -50,6 +50,7 @@ in
 	# School
 	wine
 	cisco-packet-tracer_9
+	godot blender
 
         # Work
         libreoffice-still
