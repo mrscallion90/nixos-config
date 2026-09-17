@@ -82,7 +82,7 @@ in
         set fish_greeting # Disable greeting
 
 	#school stuff
-	alias davinci-look="env WINEPREFIX=~/misc/davinci-look/wine-prefix/ wine /home/user/misc/davinci-look/wine-prefix/drive_c/Stueber\ Software/daVinci\ 3\ Look/daVinciLook.exe"
+	alias davinci-look="env WINEPREFIX=/home/user/misc/davinci-look/wine-prefix/ wine /home/user/misc/davinci-look/wine-prefix/drive_c/Stueber\ Software/daVinci\ 3\ Look/daVinciLook.exe"
 
         # nixos stuff
         alias nixos-rebuild-shortcut="doas nixos-rebuild switch -I nixos-config=$HOME/nixos-config/configuration.nix"
