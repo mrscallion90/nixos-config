@@ -1,4 +1,6 @@
 README
+IF U WANT TO USE THIS CONFIG
+BRING ~/misc/ with you for davinci look
 
 one day, u copy this setup:
 https://youtu.be/aNgujRXDTdE
