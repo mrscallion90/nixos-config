@@ -49,9 +49,18 @@ in
         # unstable.pkg
 
 	# School
-	wine
-	cisco-packet-tracer_9 python313 python313Packages.psutil
+	wine #davinci look
+
+	#iot
+	cisco-packet-tracer_9 
+	(python313.withPackages (python-pkgs: with python-pkgs; [
+	# select Python packages here
+	psutil
+	]))
+
+	#fyp
 	blender godot_4_7 # u just change godot version manually
+
         # Work
         libreoffice-still
 
