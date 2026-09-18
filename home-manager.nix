@@ -50,7 +50,7 @@ in
 
 	# School
 	wine
-	cisco-packet-tracer_9
+	cisco-packet-tracer_9 python313 python313Packages.psutil
 	blender godot_4_7 # u just change godot version manually
         # Work
         libreoffice-still
