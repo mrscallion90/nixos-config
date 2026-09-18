@@ -8,6 +8,10 @@ https://youtu.be/aNgujRXDTdE
 flakes?
 https://youtu.be/XcRe-XS2nak
 
+this guy seems solid:
+copy his shit
+https://codeberg.org/mateowoetam/configuration.nix/src/branch/main
+
 Setup (assumes from base of graphical install of plasma)
 nix-shell -p git
 git clone https://github.com/mrscallion90/nixos-config .
