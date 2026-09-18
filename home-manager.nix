@@ -144,6 +144,7 @@ in
       vim.opt.number = true
       vim.opt.wrap = false
       -- vim.opt.tabwidth = 2
+      vim.opt.tabstop = 4
       vim.opt.swapfile = false
       vim.opt.signcolumn = "yes"
       vim.cmd(":hi statusline guibg=NONE") -- Transparent status line
