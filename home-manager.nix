@@ -166,6 +166,12 @@ in
       map("n", "<leader>k", vim.lsp.buf.hover, { desc = "Hover documentation" })
       map("n", "<leader>a", vim.lsp.buf.code_action, { desc = "Code action" })
       map("n", "<leader>r", vim.lsp.buf.rename, { desc = "Rename symbol" })
+  
+      -- Diagnostics
+      vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic", })
+      vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic", })
+      vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show diagnostic", })
+      vim.keymap.set("n", "<leader>D", vim.diagnostic.setloclist, { desc = "Show file diagnostics", })
 
       
       -- Plugin load
