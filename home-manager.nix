@@ -69,7 +69,7 @@ in
         # Development
         lazygit git
 	# Neovim LSP
-	superhtml
+	superhtml pyright
 
         # Gaming
         steam lutris protonplus
@@ -214,6 +214,7 @@ in
       vim.lsp.enable(
         {
           "superhtml",
+	  "pyright",
         }
       )
       '';
