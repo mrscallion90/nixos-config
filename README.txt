@@ -7,6 +7,7 @@ https://youtu.be/aNgujRXDTdE
 
 flakes?
 https://youtu.be/XcRe-XS2nak
+https://youtu.be/a67Sv4Mbxmc
 
 this guy seems solid:
 copy his shit
