@@ -79,8 +79,8 @@ in
         # Development
         lazygit git
 		nim nimble # dnd-nim
-	# Neovim LSP
-	superhtml pyright
+		# Neovim LSP
+		superhtml pyright nimlangserver
 
         # Gaming
         steam lutris protonplus
@@ -232,7 +232,8 @@ in
       vim.lsp.enable(
         {
           "superhtml",
-	  "pyright",
+		  "pyright",
+		  "nimlangserver",
         }
       )
       '';
