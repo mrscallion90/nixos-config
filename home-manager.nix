@@ -78,7 +78,7 @@ in
 
         # Development
         lazygit git
-		nim # dnd-nim
+		nim nimble # dnd-nim
 	# Neovim LSP
 	superhtml pyright
 
