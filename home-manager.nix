@@ -229,7 +229,7 @@ in
 			
       -- Plugins keybinds
       map('n', '<leader>f', ':Pick files<CR>')
-      map('n', '<leader>F', ':Pick grep<CR>')
+      map('n', '<leader>g', ':Pick grep<CR>')
       map('n', '<leader>w', ':HopWord<CR>')
 
 
