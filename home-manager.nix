@@ -83,6 +83,9 @@ in
         # Neovim LSP
         superhtml pyright nimlangserver
 
+        # Cool magic system stuff
+        lean4
+
         # Gaming
         steam lutris protonplus
       ];
