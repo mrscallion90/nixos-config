@@ -97,8 +97,8 @@ in
       interactiveShellInit = ''
         set fish_greeting # Disable greeting
 
-	#school stuff
-	alias davinci-look="env WINEPREFIX=/home/user/misc/davinci-look/wine-prefix/ wine /home/user/misc/davinci-look/wine-prefix/drive_c/Stueber\ Software/daVinci\ 3\ Look/daVinciLook.exe"
+        #school stuff
+        alias davinci-look="env WINEPREFIX=/home/user/misc/davinci-look/wine-prefix/ wine /home/user/misc/davinci-look/wine-prefix/drive_c/Stueber\ Software/daVinci\ 3\ Look/daVinciLook.exe"
 
         # nixos stuff
         alias nixos-rebuild-shortcut="doas nixos-rebuild switch -I nixos-config=$HOME/nixos-config/configuration.nix"
@@ -107,7 +107,7 @@ in
         # Helper
         alias lg="lazygit"
         alias xo="xdg-open"
-		alias cd="z"
+        alias cd="z"
 
         # Mullvad
         alias mullvad-on='mullvad lockdown-mode set on && mullvad connect'
@@ -222,14 +222,14 @@ in
       require("mini.git").setup()
 
       require('mini.comment').setup()
-      require('mini.comment').config = { comment="<C-c>" }
+      -- require('mini.comment').config = { comment="<C-c>" }
 
       require("hop").setup()
       require("oil").setup()
 			
       -- Plugins keybinds
       map('n', '<leader>f', ':Pick files<CR>')
-      map('n', '<leader>g', ':Pick grep<CR>')
+      map('n', '<leader>g', ':Pick grep<CR><CR>')
       map('n', '<leader>w', ':HopWord<CR>')
 
 
