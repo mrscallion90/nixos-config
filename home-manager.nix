@@ -48,18 +48,18 @@ in
         # Packages in root enviroment already: helix, tmux
         # unstable.pkg
 
-	# School
-	wine #davinci look
+        # School
+        wine #davinci look
 
-	#iot
-	cisco-packet-tracer_9 
-	(python313.withPackages (python-pkgs: with python-pkgs; [
-	# select Python packages here
-	psutil
-	]))
+        #iot
+        cisco-packet-tracer_9 
+        (python313.withPackages (python-pkgs: with python-pkgs; [
+          # select Python packages here
+          psutil
+        ]))
 
-	#fyp
-	blender godot_4_7 # u just change godot version manually
+        #fyp
+        blender godot_4_7 # u just change godot version manually
 
         # Work
         libreoffice-still
