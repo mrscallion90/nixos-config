@@ -49,7 +49,8 @@ home-manager/init.nix # import this in configuration.nix
 home-manager/dev/neovim.nix
 home-manager/dev/fish.nix
 
-
+[ ] https://m.youtube.com/watch?v=0QZI_m8WZ0Q
+Learn LEAN, remember trying a mathematical (functional) magical system when u had schizo episode? chase that high again
 [ ] Use emacs and revolve whole workflow around it like lcolonq
 [ ] Test reproducability in Virtual Machine
 [ ] networkmanager config on nixos that reconnects VPN after each wifi connection
