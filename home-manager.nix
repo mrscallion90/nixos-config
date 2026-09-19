@@ -63,6 +63,7 @@ in
 
         # Work
         libreoffice-still
+		kdePackages.kolourpaint
 
         # Internet
         librewolf brave
@@ -77,6 +78,7 @@ in
 
         # Development
         lazygit git
+		nim # dnd-nim
 	# Neovim LSP
 	superhtml pyright
 
