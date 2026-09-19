@@ -51,7 +51,7 @@ home-manager/dev/fish.nix
 
 [ ] https://m.youtube.com/watch?v=0QZI_m8WZ0Q
 Learn LEAN, remember trying a mathematical (functional) magical system when u had schizo episode? chase that high again
-[ ] Use emacs and revolve whole workflow around it like lcolonq
+[ ] Use emacs and revolve whole workflow around it like lcolonq (doom & evil emacs)
 [ ] Test reproducability in Virtual Machine
 [ ] networkmanager config on nixos that reconnects VPN after each wifi connection
 [ ] Put disko for disk volumes as well
