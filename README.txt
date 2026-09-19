@@ -50,7 +50,7 @@ home-manager/dev/neovim.nix
 home-manager/dev/fish.nix
 
 
-
+[ ] Use emacs and revolve whole workflow around it like lcolonq
 [ ] Test reproducability in Virtual Machine
 [ ] networkmanager config on nixos that reconnects VPN after each wifi connection
 [ ] Put disko for disk volumes as well
