@@ -63,7 +63,7 @@ in
 
         # Work
         libreoffice-still
-		kdePackages.kolourpaint
+        kdePackages.kolourpaint
 
         # Internet
         librewolf brave
@@ -77,10 +77,11 @@ in
         bitwarden-desktop
 
         # Development
+        ungoogled-chromium
         lazygit git
-		nim nimble # dnd-nim
-		# Neovim LSP
-		superhtml pyright nimlangserver
+        nim nimble # dnd-nim
+        # Neovim LSP
+        superhtml pyright nimlangserver
 
         # Gaming
         steam lutris protonplus
