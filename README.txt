@@ -55,6 +55,7 @@ LFS! Or T2 SDE to bootstrap?
 [ ] https://m.youtube.com/watch?v=0QZI_m8WZ0Q
 Learn LEAN, remember trying a mathematical (functional) magical system when u had schizo episode? chase that high again
 [ ] Use emacs and revolve whole workflow around it like lcolonq (doom & evil emacs)
+https://m.youtube.com/watch?v=PKaJoqQQoIA
 [ ] Test reproducability in Virtual Machine
 [ ] networkmanager config on nixos that reconnects VPN after each wifi connection
 [ ] Put disko for disk volumes as well
