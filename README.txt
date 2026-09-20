@@ -50,6 +50,8 @@ home-manager/init.nix # import this in configuration.nix
 home-manager/dev/neovim.nix
 home-manager/dev/fish.nix
 
+[ ] https://m.youtube.com/watch?v=13hSE3bGIJo
+LFS!
 [ ] https://m.youtube.com/watch?v=0QZI_m8WZ0Q
 Learn LEAN, remember trying a mathematical (functional) magical system when u had schizo episode? chase that high again
 [ ] Use emacs and revolve whole workflow around it like lcolonq (doom & evil emacs)
