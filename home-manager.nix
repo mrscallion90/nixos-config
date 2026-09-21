@@ -255,9 +255,9 @@ in
         modifier = "Mod4";
         terminal = "konsole";
 
-        startup = [
-          { command = "konsole"; }
-        ];
+        # startup = [
+        #  { command = "konsole"; }
+        # ];
       };
     };
 
