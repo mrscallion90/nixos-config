@@ -6,6 +6,14 @@
   services.displayManager.ly.enable = true;
   services.desktopManager.plasma6.enable = true;
 
+  programs.sway = {
+    enable = true;
+    # GTK wrapper support
+    wrapperFeatures.gtk = true;
+  };
+
+  services.displayManager.sessionPackages = [ pkgs.sway ];
+
   services.flatpak.enable = true; # sober
 
   services.libinput = {

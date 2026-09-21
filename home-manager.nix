@@ -70,7 +70,7 @@ in
 
         # CLI Stuff
         mpv yt-dlp ffmpeg
-        tree fzf wl-clipboard
+        tree fzf wl-clipboard tldr
         zoxide
 
         # Password Manager
@@ -248,13 +248,14 @@ in
 
     wayland.windowManager.sway = {
       enable = true;
-      wrapperFeatures.gtk = true; # Fixes common issues with GTK 3 apps
-      config = rec {
-        modifier = "Mod4"; # Super key
-        # Use kitty as default terminal
+      package = null;
+      systemd.enable = true;
+
+      config = {
+        modifier = "Mod4";
         terminal = "konsole";
+
         startup = [
-          # Launch Firefox on start
           { command = "konsole"; }
         ];
       };
