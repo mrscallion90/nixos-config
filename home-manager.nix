@@ -246,6 +246,20 @@ in
       '';
     };
 
+    wayland.windowManager.sway = {
+      enable = true;
+      wrapperFeatures.gtk = true; # Fixes common issues with GTK 3 apps
+      config = rec {
+        modifier = "Mod4"; # Super key
+        # Use kitty as default terminal
+        terminal = "konsole";
+        startup = [
+          # Launch Firefox on start
+          { command = "konsole"; }
+        ];
+      };
+    };
+
     # The state version is required and should stay at the version you
     # originally installed.
     home.stateVersion = "26.05"; # DONT CHANGE
