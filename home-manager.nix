@@ -210,8 +210,8 @@ in
       	  {src='https://github.com/nvim-mini/mini.notify',     version="stable"},  -- Required for mini.git
       	  {src='https://github.com/nvim-mini/mini-git',        version="stable"}   -- Productivity, maybe? I am used to lazygit
 
-	  -- [TODO] https://github.com/jake-stewart/multicursor.nvim -- add this guy later
--- Also find org mode for neovim
+          -- [TODO] https://github.com/jake-stewart/multicursor.nvim -- add this guy later
+          -- Also find org mode for neovim
         }
       )
 
