@@ -48,6 +48,9 @@ in
         # Packages in root enviroment already: helix, tmux
         # unstable.pkg
 
+        # Messaging
+        telegram-desktop discord #whatsapp can installed as webapp from brave
+
         # School
         wine #davinci look
 
@@ -254,6 +257,16 @@ in
       config = {
         modifier = "Mod4";
         terminal = "konsole";
+        input = {
+        "type:touchpad" = {
+          # Enables or disables tap for specified input device.
+          tap = "enabled";
+          # Enables or disables natural (inverted) scrolling for the specified input device.
+          natural_scroll = "enabled";
+          # Enables or disables disable-while-typing for the specified input device.
+          dwt = "enabled";
+        };
+    };
 
         # startup = [
         #  { command = "konsole"; }
