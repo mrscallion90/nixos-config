@@ -80,7 +80,7 @@ in
         bitwarden-desktop
 
         # Development
-        ollama # Local AI/MCP stuff | qwen2.5:7b
+        ollama opencode # Local AI/MCP stuff | qwen2.5:7b
         nodejs_22 # npx for deepseek-harness
         ungoogled-chromium
         lazygit git
