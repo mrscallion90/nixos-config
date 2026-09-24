@@ -80,8 +80,8 @@ in
         bitwarden-desktop
 
         # Development
-        ollama opencode # Local AI/MCP stuff | qwen2.5:7b
-        nodejs_22 # npx for deepseek-harness
+        ollama # Local AI/MCP stuff | qwen2.5:7b
+        nodejs_22 pnpm # npx for deepseek-harness
         ungoogled-chromium
         lazygit git
         nim nimble # dnd-nim
@@ -268,6 +268,19 @@ in
           # Enables or disables disable-while-typing for the specified input device.
           dwt = "enabled";
         };
+    };
+
+    programs.opencode = {
+      enable = true;
+      settings = ''
+      "deepseekv4": {
+        "npm": "@ai-sdk/anthropic",
+        "name": "DeepSeek",
+        "options": {
+          "baseURL": "https://api.deepseek.com/anthropic"
+        },
+      }
+      '';
     };
 
         # startup = [
