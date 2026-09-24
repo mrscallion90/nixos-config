@@ -8,7 +8,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./services.nix
-      ./home-manager.nix
+      ./home-manager/base.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
