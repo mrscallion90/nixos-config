@@ -31,7 +31,7 @@ in
   # For the fish shell :)
   programs.fish.enable = true;
 
-  # Also use system packages as well
+  # Also use system packages seetings as well
   home-manager.useGlobalPkgs = true;
 
   # Home manager
@@ -99,7 +99,8 @@ in
         lean4
 
         # Gaming
-        steam lutris protonplus
+        # steam lutris protonplus
+        # we use flatpaks instead
       ];
     };
 
