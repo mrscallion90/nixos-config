@@ -99,8 +99,8 @@ in
         lean4
 
         # Gaming
-        # steam lutris protonplus
-        # we use flatpaks instead
+        lutris protonplus
+        # we use flatpak for steam instead
       ];
     };
 
