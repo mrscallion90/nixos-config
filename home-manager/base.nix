@@ -79,6 +79,7 @@ in
         librewolf brave
 
         # CLI Stuff
+        fastfetch btop
         mpv yt-dlp ffmpeg
         tree fzf wl-clipboard tldr
         zoxide
