@@ -7,7 +7,8 @@
 
     initLua = ''
       vim.opt.number = true
-      vim.opt.wrap = false
+      -- vim.opt.wrap = false
+      vim.opt.wrap = true -- temporary
       vim.opt.shiftwidth = 2
       vim.opt.softtabstop = 2
       vim.opt.tabstop = 2
