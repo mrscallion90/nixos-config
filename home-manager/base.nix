@@ -25,7 +25,7 @@ in
   users.users.user = {
     isNormalUser = true;
     description = "user";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     shell = pkgs.fish;
   };
   # For the fish shell :)
@@ -36,6 +36,7 @@ in
 
   # Home manager
   home-manager.users.user = {
+
     imports = [
       ./fish.nix
       ./neovim.nix
