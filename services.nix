@@ -6,6 +6,9 @@
   # services.displayManager.ly.enable = true;
   services.desktopManager.plasma6.enable = true;
 
+  # Docker for xampp
+  virtualisation.docker.enable = true;
+
   programs.sway = {
     enable = true;
     # GTK wrapper support
