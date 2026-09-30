@@ -11,6 +11,7 @@
       # nixos stuff
       alias nixos-rebuild-shortcut="doas nixos-rebuild switch -I nixos-config=$HOME/nixos-config/configuration.nix"
       alias nixos-config="$EDITOR $HOME/nixos-config"
+      alias nix-search="nix search nixpkgs $argv"
 
       # Helper
       alias lg="lazygit"
