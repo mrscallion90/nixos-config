@@ -3,9 +3,13 @@
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
 { config, pkgs, ... }:
+let
+  nixos-hardware = builtins.fetchTarball https://github.com/NixOS/nixos-hardware/archive/master.tar.gz;
+in
 {
   imports =
     [ # Include the results of the hardware scan.
+      "${nixos-hardware}/lenovo/ideapad/15alc6"
       ./hardware-configuration.nix
       ./services.nix
       ./home-manager/base.nix
