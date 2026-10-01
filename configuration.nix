@@ -47,6 +47,7 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
+  hardware.enableAllFirmware = true; # camera
 
   hardware.bluetooth = {
     enable = true;
