@@ -111,7 +111,7 @@ in
     # Internet download
     wget links2
     # Debugging
-    helix
+    helix busybox
     # Pretty for nix output log
     nix-output-monitor
     # Required by services
