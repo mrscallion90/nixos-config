@@ -50,6 +50,8 @@ home-manager/init.nix # import this in configuration.nix
 home-manager/dev/neovim.nix
 home-manager/dev/fish.nix
 
+
+[ ] KDE: Limit the maximum battery charge
 [ ] https://m.youtube.com/watch?v=13hSE3bGIJo
 LFS! Or T2 SDE to bootstrap?
 [ ] https://m.youtube.com/watch?v=0QZI_m8WZ0Q
