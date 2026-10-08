@@ -86,7 +86,7 @@ in
         zoxide
 
         # Helpful GUI
-        filelight
+        kdePackages.filelight
 
         # Password Manager
         bitwarden-desktop
