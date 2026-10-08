@@ -85,6 +85,9 @@ in
         tree fzf wl-clipboard tldr
         zoxide
 
+        # Helpful GUI
+        filelight
+
         # Password Manager
         bitwarden-desktop
 
