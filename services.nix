@@ -56,53 +56,8 @@
 
     # Use the WirePlumber session manager
     #wireplumber.enable = true;
-    extraConfig.pipewire."99-rnnoise" = {
-      "context.modules" = [
-        {
-          name = "libpipewire-module-filter-chain";
 
-          args = {
-            "node.description" = "Noise Suppression";
-            "media.name" = "Noise Suppression";
-
-            "filter.graph" = {
-              nodes = [
-                {
-                  type = "ladspa";
-                  name = "rnnoise";
-                  plugin = "${pkgs.rnnoise-plugin}/lib/ladspa/librnnoise_ladspa.so";
-                  label = "noise_suppressor_stereo";
-
-                  control = {
-                    "VAD Threshold (%)" = 50;
-                    "VAD Grace Period (ms)" = 200;
-                    "Retroactive VAD Grace (ms)" = 0;
-                  };
-                }
-              ];
-            };
-
-            "capture.props" = {
-              "audio.channels" = "2";
-              "audio.position" = "[ FL FR ]";
-              "channelmix.upmix" = true;
-              "channelmix.normalize" = false;
-              "node.name" = "capture.rnnoise_source";
-              "node.passive" = true;
-              "audio.rate" = 48000;
-            };
-
-            "playback.props" = {
-              "audio.channels" = "2";
-              "audio.position" = "[ FL FR ]";
-              "node.name" = "rnnoise_source";
-              "media.class" = "Audio/Source";
-              "audio.rate" = 48000;
-            };
-          };
-        }
-      ];
-    };
+    # The virtual microphone effect chain lives in ./microphone.nix
   };
 
   # Root level

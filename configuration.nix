@@ -12,6 +12,7 @@ in
       "${nixos-hardware}/lenovo/ideapad/15alc6"
       ./hardware-configuration.nix
       ./services.nix
+      ./microphone.nix
       ./home-manager/base.nix
     ];
 
@@ -111,8 +112,9 @@ in
 
   # Root packages
   environment.systemPackages = with pkgs; [
-    # Virtual Mic with Noise Supression Audio
-    rnnoise-plugin # Used in services.pipewire.extraConfig
+    # Virtual Mic with Noise Suppression (used by ./microphone.nix)
+    rnnoise-plugin
+    ladspaPlugins # sc1 compressor for the mic effect chain
     # Internet download
     wget links2
     # Debugging
