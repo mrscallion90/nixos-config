@@ -57,6 +57,10 @@ home-manager/dev/neovim.nix
 home-manager/dev/fish.nix
 
 
+
+
+[ ] Apparently you can maximize RAM to iGPU for LLM usage
+https://wiki.nixos.org/wiki/AMD_GPU
 [ ] KDE: Limit the maximum battery charge
 [ ] https://m.youtube.com/watch?v=13hSE3bGIJo
 LFS! Or T2 SDE to bootstrap?

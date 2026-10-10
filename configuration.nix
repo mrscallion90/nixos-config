@@ -43,6 +43,11 @@ in
     };
   };
   hardware.cpu.amd.updateMicrocode = true;
+
+  hardware.graphics = { # trying to see if this works ffmpeg-vaapi (if filmcraft detects it) HEVC/H.265
+    enable = true;
+    enable32Bit = true;
+  };
   
   # List services that you want to enable:
   # Open ports in the firewall.

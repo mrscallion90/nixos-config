@@ -81,7 +81,7 @@ in
 
         # CLI Stuff
         fastfetch btop
-        mpv yt-dlp ffmpeg
+        mpv yt-dlp ffmpeg-full
         tree fzf wl-clipboard tldr
         zoxide
 
