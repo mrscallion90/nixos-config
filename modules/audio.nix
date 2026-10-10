@@ -1,47 +1,6 @@
-{ config, pkgs, ... }:
-
+{ pkgs, ... }:
 {
-  # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
-  # services.displayManager.ly.enable = true;
-  services.desktopManager.plasma6.enable = true;
-
-  # Docker for xampp
-  virtualisation.docker.enable = true;
-
-  programs.sway = {
-    enable = true;
-    # GTK wrapper support
-    wrapperFeatures.gtk = true;
-  };
-
-  services.displayManager.sessionPackages = [ pkgs.sway ];
-
-  services.flatpak.enable = true; # sober
-
-  services.libinput = {
-    enable = true;
-    # Touchpad
-    touchpad = {
-      naturalScrolling = true; # Enables Natural scrolling
-      accelProfile = "flat";   # Disables mouse acceleration
-    };
-
-    # Mouse
-    mouse = {
-      naturalScrolling = true; # Enables Natural scrolling
-      accelProfile = "flat";   # Disables mouse acceleration
-    };
-  };
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
-  # Mullvad VPN
-  services.mullvad-vpn = {
-    enable = true;
-    package = pkgs.mullvad-vpn;
-  };
+  imports = [ ../audio/microphone.nix ];
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
@@ -56,8 +15,6 @@
 
     # Use the WirePlumber session manager
     #wireplumber.enable = true;
-
-    # The virtual microphone effect chain lives in ./microphone.nix
   };
 
   # Root level
