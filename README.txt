@@ -1,3 +1,9 @@
+REFACTOR, IT HAS GLUE CODE
+THE FACT U STUMBLED USING GREP
+just separate using files and folder
+think of it as that one library sorting game
+
+
 README
 IF U WANT TO USE THIS CONFIG
 BRING ~/misc/ with you for davinci look
