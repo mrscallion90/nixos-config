@@ -131,6 +131,19 @@ in
     '';
   };
 
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    # Add any missing dynamic libraries for unpackaged programs
+    # here, NOT in environment.systemPackages
+
+    # filmcraft & photocraft
+    libGL vulkan-loader # graphic libraries
+    libxcb libxkbcommon  # keyboard
+    libX11 libXcursor libXi libXrandr #xorg/x11
+    wayland  # wayland
+    alsa-lib  # audio
+  ];
+
   # Nix-command & flakes is still in beta despite widely used so uhh..
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
