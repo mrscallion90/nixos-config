@@ -51,6 +51,15 @@
       vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show diagnostic", })
       vim.keymap.set("n", "<leader>D", vim.diagnostic.setloclist, { desc = "Show file diagnostics", })
 
+      -- sh (helix), read shell output into buffer
+      vim.api.nvim_create_user_command(
+        'sh',
+        function(opts)
+          vim.cmd('read ! ' .. opts.args)
+        end,
+        { nargs = '+', desc = 'Read shell output into buffer' }
+      )
+
 
       -- Plugin load
       vim.pack.add(
@@ -65,7 +74,12 @@
       	  {src='https://github.com/nvim-mini/mini.comment',    version="stable"},
       	  {src='https://github.com/nvim-mini/mini.diff',       version="stable"},  -- Required for mini.git
       	  {src='https://github.com/nvim-mini/mini.notify',     version="stable"},  -- Required for mini.git
-      	  {src='https://github.com/nvim-mini/mini-git',        version="stable"}   -- Productivity, maybe? I am used to lazygit
+      	  {src='https://github.com/nvim-mini/mini-git',        version="stable"},   -- Productivity, maybe? I am used to lazygit
+
+          -- FYP College Todo/Meeting Minutes requirement
+      	  {src='https://github.com/nvim-treesitter/nvim-treesitter'}, -- Depedency for render-markdown
+      	  {src='https://github.com/MeanderingProgrammer/render-markdown.nvim'},
+          -- https://github.com/epwalsh/obsidian.nvim -- Not sure if this is needed
 
           -- [TODO] https://github.com/jake-stewart/multicursor.nvim -- add this guy later
           -- Also find org mode for neovim
@@ -88,10 +102,14 @@
       require("hop").setup()
       require("oil").setup()
 
+      -- FYP College Todo/Meeting Minutes requirement
+      require('render-markdown').setup()
+
       -- Plugins keybinds
       map('n', '<leader>f', ':Pick files<CR>')
       map('n', '<leader>g', ':Pick grep<CR><CR>')
       map('n', '<leader>w', ':HopWord<CR>')
+      map('n', '<leader>o', ':Oil<CR>')
 
 
       -- LSP Load (nvim-lspconfig)
