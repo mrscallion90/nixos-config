@@ -28,6 +28,10 @@ in
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     shell = pkgs.fish;
   };
+
+  #Virtualbox
+  users.extraGroups.vboxusers.members = [ "user" ];
+
   # For the fish shell :)
   programs.fish.enable = true;
 
@@ -78,6 +82,9 @@ in
 
         # Internet
         librewolf brave
+
+        # Streaming/Recording
+        obs-studio # Might have to create a module for this guy for settings tho
 
         # CLI Stuff
         fastfetch btop

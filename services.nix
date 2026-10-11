@@ -6,6 +6,9 @@
   # services.displayManager.ly.enable = true;
   services.desktopManager.plasma6.enable = true;
 
+  virtualisation.virtualbox.host.enable = true;
+
+
   # Docker for xampp
   virtualisation.docker.enable = true;
 
