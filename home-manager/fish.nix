@@ -18,6 +18,15 @@
       alias xo="xdg-open"
       alias cd="z"
 
+      # Aesthetics
+      alias ls="eza --icons --git"
+      alias la="eza --icons --git -a"
+      alias ll="eza --icons --git -l"
+      alias grep="rg"
+      alias cat="bat"
+      alias less="bat"
+      # no fd for find, fd is shorter than find
+
       # Mullvad
       alias mullvad-on='mullvad lockdown-mode set on && mullvad connect'
       alias mullvad-off='mullvad lockdown-mode set off && mullvad disconnect'
@@ -45,8 +54,26 @@
           end
       end
 
-	# Zoxide needs this at end of file
-	zoxide init fish | source
+      # End of file init
+      zoxide init fish | source
+      starship init fish | source
     '';
   };
+
+
+  programs.starship = {
+    enable = true;
+    presets = [ "bracketed-segments" ];
+    settings = {
+      add_newline = true;
+      command_timeout = 1300;
+      scan_timeout = 50;
+      # format = "$all$nix_shell$nodejs$lua$golang$rust$php$git_branch$git_commit$git_state$git_status$dotnet$docker_context\n$username$hostname$directory";
+      character = {
+        success_symbol = "[](bold green) ";
+        error_symbol = "[✗](bold red) ";
+      };
+    };
+  };
+
 }

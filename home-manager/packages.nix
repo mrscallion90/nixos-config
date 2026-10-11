@@ -35,7 +35,7 @@
     fastfetch btop
     mpv yt-dlp ffmpeg-full
     tree fzf wl-clipboard tldr
-    zoxide
+    zoxide bat fd ripgrep eza
     mpc # debug music player daemon
 
     # Sway / Wayland

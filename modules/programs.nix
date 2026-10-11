@@ -4,6 +4,11 @@
   programs.tmux = {
     enable = true;
     extraConfig = ''
+    # No TPM, NixOS does it this way
+    run-shell ${pkgs.tmuxPlugins.resurrect}/share/tmux-plugins/resurrect/resurrect.tmux
+    run-shell ${pkgs.tmuxPlugins.continuum}/share/tmux-plugins/continuum/continuum.tmux
+    run-shell ${pkgs.tmuxPlugins.power-theme}/share/tmux-plugins/power/tmux-power.tmux
+
     set-option -g status-position top
     set -g mouse on
     set-option -sg escape-time 10 # neovim wants ig
@@ -17,7 +22,6 @@
 
     # Ctrl+b, m: rmpc (Music Player Daemon Client) in current working directory
     bind-key m display-popup -E -w 90% -h 90% -d '#{pane_current_path}' 'ncmpcpp'
-
     '';
   };
 
