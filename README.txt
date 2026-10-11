@@ -29,6 +29,13 @@ kinda want it on my phone....
 basically over-glorified glue code
 python libraries carrying essentially
 
+sway + waybar
+terminal blur
+notification
+widgets (wifi, bluetooth, date/time, battery)
+wallpaper picker (autodefaults, saves current wallpaper in some dir)
+colorscheme theme autochange to wallpaper
+
 make docs/ folder
 with neovim.txt on
 ''
