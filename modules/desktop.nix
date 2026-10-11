@@ -14,6 +14,10 @@
 
   services.displayManager.sessionPackages = [ pkgs.sway ];
 
+  # udev rules so users in the "video"/"input" groups can control
+  # brightness (brightnessctl keybinds in home-manager/sway.nix).
+  services.udev.packages = [ pkgs.brightnessctl ];
+
   services.libinput = {
     enable = true;
     # Touchpad

@@ -38,6 +38,13 @@
     zoxide
     mpc # debug music player daemon
 
+    # Sway / Wayland
+    swaybg # wallpaper
+    brightnessctl # backlight keybinds
+    grim slurp # screenshot
+    libnotify # notify-send
+    pywal # colorscheme from wallpaper (wal)
+
     # Helpful GUI
     kdePackages.filelight
 
