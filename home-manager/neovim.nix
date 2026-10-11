@@ -109,7 +109,7 @@
       map('n', '<leader>f', ':Pick files<CR>')
       map('n', '<leader>g', ':Pick grep<CR><CR>')
       map('n', '<leader>w', ':HopWord<CR>')
-      map('n', '<leader>o', ':Oil<CR>')
+      map('n', '<leader>o', ':Oil . <CR>')
 
 
       -- LSP Load (nvim-lspconfig)
