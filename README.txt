@@ -25,7 +25,26 @@ practical usage?
 can write/read my emails
 edit my todolist on google keep
 and put stuff on google calendar
+kinda want it on my phone....
 
+make docs/ folder
+with neovim.txt on
+''
+tmux (prefix = ctrl b)
+prefix t : terminal
+prefix g : lazygit
+prefix m : ncmpcpp (mpd client;music player)
+
+nvim (prefix = space)
+prefix w : jump word
+prefix g : grep picker
+prefix f : file picker
+prefix o : Oil (file explorer)
+
+neovim.nix philosophy:
+- minimal (no useless fancy feature, focus programming)
+- onefile (easy to maintain/debug/edit/understand)
+''
 
 README
 IF U WANT TO USE THIS CONFIG
