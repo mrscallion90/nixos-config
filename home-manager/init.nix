@@ -47,6 +47,7 @@ in
       ./neovim.nix
       ./sway.nix
       ./opencode.nix
+      ./music-player-daemon.nix
     ];
 
     home = {

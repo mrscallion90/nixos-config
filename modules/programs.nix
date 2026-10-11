@@ -14,6 +14,10 @@
 
     # Ctrl+b, t: Quick CLI in current working directory
     bind-key t display-popup -E -w 80% -h 80% -d '#{pane_current_path}'
+
+    # Ctrl+b, m: rmpc (Music Player Daemon Client) in current working directory
+    bind-key m display-popup -E -w 90% -h 90% -d '#{pane_current_path}' 'ncmpcpp'
+
     '';
   };
 

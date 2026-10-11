@@ -36,6 +36,7 @@
     mpv yt-dlp ffmpeg-full
     tree fzf wl-clipboard tldr
     zoxide
+    mpc # debug music player daemon
 
     # Helpful GUI
     kdePackages.filelight
