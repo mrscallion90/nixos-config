@@ -5,8 +5,8 @@ think of it as that one library sorting game
 
 
 Fun Project
-"Mini Jarvis"
-TTS + MCP + DeepSeek API
+"Mini Jarvis" --> "Hatsune Miku"/Waifu?
+STT + TTS + MCP + DeepSeek API
 
 README
 IF U WANT TO USE THIS CONFIG
