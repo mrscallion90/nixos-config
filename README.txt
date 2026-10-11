@@ -4,6 +4,10 @@ just separate using files and folder
 think of it as that one library sorting game
 
 
+Fun Project
+"Mini Jarvis"
+TTS + MCP + DeepSeek API
+
 README
 IF U WANT TO USE THIS CONFIG
 BRING ~/misc/ with you for davinci look
