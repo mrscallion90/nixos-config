@@ -14,6 +14,7 @@ can interact with a tmux server
 can it see ur user files or it has its own files?
 prolly mcp server and some personality.md files
 check out STT that can copy people voices
+need memory, what VectorDB? dunno if api support that. maybe just md files of chat log summary or profiling(.gitignore)
 
 README
 IF U WANT TO USE THIS CONFIG
