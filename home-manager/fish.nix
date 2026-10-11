@@ -57,6 +57,7 @@
       # End of file init
       zoxide init fish | source
       starship init fish | source
+      fastfetch
     '';
   };
 
