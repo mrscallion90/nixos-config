@@ -3,7 +3,7 @@
   services.mpd = {
     enable = true;
 
-    musicDirectory = "/home/user/Music";
+    musicDirectory = "/home/user/Music"; #make it auto use ur user's name instead of hardcoding it
 
     extraConfig = ''
       audio_output {
