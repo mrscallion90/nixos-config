@@ -8,6 +8,12 @@
     set -g mouse on
     set-option -sg escape-time 10 # neovim wants ig
     set-option -g default-terminal "screen-256color" # neovim also wants it
+
+    # Ctrl+b, g: Lazygit in current working directory
+    bind-key g display-popup -E -w 90% -h 90% -d '#{pane_current_path}' 'lazygit'
+
+    # Ctrl+b, t: Quick CLI in current working directory
+    bind-key t display-popup -E -w 80% -h 80% -d '#{pane_current_path}'
     '';
   };
 
