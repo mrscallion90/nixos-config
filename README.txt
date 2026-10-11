@@ -7,6 +7,13 @@ think of it as that one library sorting game
 Fun Project
 "Mini Jarvis" --> "Hatsune Miku"/Waifu?
 STT + TTS + MCP + DeepSeek API
+Local
+Screenshot, [can describe and see]
+[can it interact? pretty sure API allow only text] can move cursor and click
+can interact with a tmux server
+can it see ur user files or it has its own files?
+prolly mcp server and some personality.md files
+check out STT that can copy people voices
 
 README
 IF U WANT TO USE THIS CONFIG
