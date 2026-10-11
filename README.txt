@@ -19,6 +19,9 @@ AI Psychosis huh?
 for mic, u have to hold down the button?
 but i wanna say "jarvis, open btop! or hollywood!" without pressing anything
 so its like siri, always listening
+avatar: live2D, image/gif
+important: voice recognition (it only respond to my voice)
+
 
 README
 IF U WANT TO USE THIS CONFIG
