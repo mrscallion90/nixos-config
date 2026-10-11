@@ -26,6 +26,8 @@ can write/read my emails
 edit my todolist on google keep
 and put stuff on google calendar
 kinda want it on my phone....
+basically over-glorified glue code
+python libraries carrying essentially
 
 make docs/ folder
 with neovim.txt on
