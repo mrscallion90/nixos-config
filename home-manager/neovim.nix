@@ -53,7 +53,7 @@
 
       -- sh (helix), read shell output into buffer
       vim.api.nvim_create_user_command(
-        'sh',
+        'Sh',
         function(opts)
           vim.cmd('read ! ' .. opts.args)
         end,
@@ -75,6 +75,7 @@
       	  {src='https://github.com/nvim-mini/mini.diff',       version="stable"},  -- Required for mini.git
       	  {src='https://github.com/nvim-mini/mini.notify',     version="stable"},  -- Required for mini.git
       	  {src='https://github.com/nvim-mini/mini-git',        version="stable"},   -- Productivity, maybe? I am used to lazygit
+          {src = 'https://github.com/nvim-mini/mini.icons',    version = 'stable' }, -- Icons since I am lazy to install that system-wide
 
           -- FYP College Todo/Meeting Minutes requirement
       	  {src='https://github.com/nvim-treesitter/nvim-treesitter'}, -- Depedency for render-markdown
@@ -95,9 +96,8 @@
       require("mini.diff").setup() -- Required for mini.git
       require("mini.notify").setup() -- Required for mini.git
       require("mini.git").setup()
-
       require('mini.comment').setup()
-      -- require('mini.comment').config = { comment="<C-c>" }
+      require('mini.icons').setup()
 
       require("hop").setup()
       require("oil").setup()

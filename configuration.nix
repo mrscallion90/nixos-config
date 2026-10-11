@@ -18,6 +18,7 @@
     ./modules/virtualisation.nix
     ./modules/audio.nix
     ./modules/services.nix
+    ./modules/fonts.nix
 
     ./home-manager/init.nix
   ];
