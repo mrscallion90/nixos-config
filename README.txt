@@ -21,6 +21,10 @@ but i wanna say "jarvis, open btop! or hollywood!" without pressing anything
 so its like siri, always listening
 avatar: live2D, image/gif
 important: voice recognition (it only respond to my voice)
+practical usage?
+can write/read my emails
+edit my todolist on google keep
+and put stuff on google calendar
 
 
 README
