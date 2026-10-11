@@ -15,6 +15,10 @@ can it see ur user files or it has its own files?
 prolly mcp server and some personality.md files
 check out STT that can copy people voices
 need memory, what VectorDB? dunno if api support that. maybe just md files of chat log summary or profiling(.gitignore)
+AI Psychosis huh?
+for mic, u have to hold down the button?
+but i wanna say "jarvis, open btop! or hollywood!" without pressing anything
+so its like siri, always listening
 
 README
 IF U WANT TO USE THIS CONFIG
