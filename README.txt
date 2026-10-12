@@ -28,6 +28,9 @@ and put stuff on google calendar
 kinda want it on my phone....
 basically over-glorified glue code
 python libraries carrying essentially
+see openrouter free models and its embeddings & text
+
+
 
 [x] sway + waybar
 [x] terminal blur
