@@ -47,6 +47,9 @@ python + mardown + mcp + cli scripts
 no nodejs stuff or too many depedencies (dont want supply chain attack or install weird plugins)
 kept simple and minimal
 
+https://m.youtube.com/watch?v=jlWnoRsGJNQ
+learn rust following this guys stack
+its pretty goated
 
 imagine wfh and waking pc from sleep or press mirror or stand near mirror (soundwave sensor or sumn) and get report of today
 
