@@ -20,6 +20,7 @@
     # Ctrl+b, g: Lazygit in current working directory
     bind-key g display-popup -E -w 90% -h 90% -d '#{pane_current_path}' 'lazygit'
 
+    # make this exec a script, which opens a tmux session (same name), so the state persists
     # Ctrl+b, t: Quick CLI in current working directory
     bind-key t display-popup -E -w 80% -h 80% -d '#{pane_current_path}'
 
