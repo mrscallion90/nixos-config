@@ -65,6 +65,7 @@
 
     # Gaming
     lutris protonplus
+    rpcs3
     # we use flatpak for steam instead
   ];
 }
