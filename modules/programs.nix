@@ -4,6 +4,9 @@
   programs.tmux = {
     enable = true;
     extraConfig = ''
+    # set -g @tmux_power_theme 'snow'
+    set -g @tmux_power_theme 'moon'
+
     # No TPM, NixOS does it this way
     run-shell ${pkgs.tmuxPlugins.resurrect}/share/tmux-plugins/resurrect/resurrect.tmux
     run-shell ${pkgs.tmuxPlugins.continuum}/share/tmux-plugins/continuum/continuum.tmux
