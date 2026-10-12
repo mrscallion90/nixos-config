@@ -1,3 +1,8 @@
+# vibecoded mess
+# treat it as magical file hidden away as one file
+# prolly have ai clean it up tho
+
+
 { config, pkgs, lib, ... }:
 let
   # Single source of truth for the window manager modifier.
