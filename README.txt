@@ -2,6 +2,16 @@ NO MORE VIBECODING OR OPENCODE BRAINROT
 I CAN FEEL MY DOPAMINE FRIED
 try to write organic brain made code
 
+get away from AI/Vibecoding slop
+a slippery slope with how addictive it is because "productivity" dopamine hit boost
+and how tokens inflate like crazy, costs as well
+
+and it makes you shitty at programmimg over time
+
+its like a steroid
+micro-doses or clinical use is fine
+if abused, its bad
+(bla bla all in moderacy)
 
 
 REFACTOR, IT HAS GLUE CODE
@@ -52,6 +62,72 @@ yeah, this is wanking off to fantasy
 python + mardown + mcp + cli scripts
 no nodejs stuff or too many depedencies (dont want supply chain attack or install weird plugins)
 kept simple and minimal
+
+# separate repo? nahh
+# i prefer hatsune miku integrated in my OS 
+# literally nyacraft + omarchy
+modules
+in
+hatsune-miku/
+in
+src/
+init.nix
+linker.nix
+dotenv.nix #.gitignore
+# basically our config file, python just read the env
+dotenv.nix.example 
+
+src/
+in
+llm/ # opens a session or continue a session from API
+llm/module.py
+
+src/
+in
+avatar/
+avatar/personality.txt
+avatar/live2d # later
+avatar/siri-like/
+avatar/png-gifs
+
+src/
+in
+audio/
+audio/tts/
+audio/tts/module.py
+audio/tts/config.py or miku-voicebank.py
+
+audio/stt/module.py
+
+src/
+in
+mcp/
+mcp/server/
+mcp/server/module.py
+mcp/server/server.py
+mcp/server/cli.py
+
+mcp/tools/main.py
+mcp/tools/report.py
+
+mcp/tools/email/
+mcp/tools/email/read.py
+mcp/tools/email/write.py
+mcp/tools/email/delete.py
+mcp/tools/email/templates/*.txt or *.html
+
+mcp/tools/google/
+
+mcp/tools/google/calendar/
+mcp/tools/google/calendar/read.py
+mcp/tools/google/calendar/write.py
+mcp/tools/google/calendar/delete.py
+
+mcp/tools/google/keep
+mcp/tools/google/keep/read.py
+mcp/tools/google/keep/write.py
+mcp/tools/google/keep/delete.py
+
 
 https://m.youtube.com/watch?v=jlWnoRsGJNQ
 learn rust following this guys stack
