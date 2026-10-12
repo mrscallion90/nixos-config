@@ -1,3 +1,9 @@
+NO MORE VIBECODING OR OPENCODE BRAINROT
+I CAN FEEL MY DOPAMINE FRIED
+try to write organic brain made code
+
+
+
 REFACTOR, IT HAS GLUE CODE
 THE FACT U STUMBLED USING GREP
 just separate using files and folder
