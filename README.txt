@@ -30,6 +30,27 @@ basically over-glorified glue code
 python libraries carrying essentially
 see openrouter free models and its embeddings & text
 https://youtu.be/Ef5zPm7U7So
+ideally this setup runs locally, high chances deepseek
+one llm only (no bullshit multi-agent nonsense, i prefer it sequential and only one thing that runs so i can keep track)
+emails use template with POP/IMAP protocol
+hope google keep and google calendar got its own library python
+i want that display touchscreen mirror (jsholz) or projector that shows report of messages from slack, emails, anything work
+maybe personal email
+i mean if u have a PC, u might get a UPS and keep it on all times ngl
+if u have PC, u might get a tablet for entertainment or maybe fancy long battery ssh/vnc machine
+totally mini ITX pc and some nas server
+ideally, u wanna degoogle and self host
+dnssec carrying
+and phone minimal ig
+yeah, this is wanking off to fantasy
+
+imagine wfh and waking pc from sleep or press mirror or stand near mirror (soundwave sensor or sumn) and get report of today
+
+personal life needs to be its own space so just read, reply its own messages
+maybe get a dumbphone? or nokia 🗿
+
+try to see if u can duplicate ur sim (unlimited data)
+or if u can convert it into esim and use some usb dongle to connect mobile data
 
 
 [x] sway + waybar
