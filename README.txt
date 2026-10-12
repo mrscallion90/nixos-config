@@ -43,6 +43,10 @@ ideally, u wanna degoogle and self host
 dnssec carrying
 and phone minimal ig
 yeah, this is wanking off to fantasy
+python + mardown + mcp + cli scripts
+no nodejs stuff or too many depedencies (dont want supply chain attack or install weird plugins)
+kept simple and minimal
+
 
 imagine wfh and waking pc from sleep or press mirror or stand near mirror (soundwave sensor or sumn) and get report of today
 
