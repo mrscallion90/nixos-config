@@ -29,7 +29,7 @@ kinda want it on my phone....
 basically over-glorified glue code
 python libraries carrying essentially
 see openrouter free models and its embeddings & text
-
+https://youtu.be/Ef5zPm7U7So
 
 
 [x] sway + waybar
