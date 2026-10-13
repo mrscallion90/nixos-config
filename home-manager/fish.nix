@@ -43,7 +43,9 @@
         mpv --shuffle --loop-playlist $(realpath $HOME/Music/* | fzf --prompt "Music Folder: ")
       end
 
-      # Autologins into tmux
+      bind alt-b 'nixos-rebuild-shortcut'
+      bind alt-space 'vi .'
+
       if status is-interactive
           and not set -q TMUX
           # and not set -q KONSOLE_DBUS_SESSION # <-- skip if inside Yakuake, Konsole
