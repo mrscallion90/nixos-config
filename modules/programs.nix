@@ -1,5 +1,14 @@
 { pkgs, ... }:
 {
+
+  # Shell scripts
+  environment.systemPackages = [
+    (pkgs.writeShellScriptBin "tmux-quick-cli" ''
+      unset TMUX
+      exec ${pkgs.tmux}/bin/tmux new-session -A -s quick-cli
+    '')
+  ];
+
   # Need for TTY
   programs.tmux = {
     enable = true;
@@ -22,7 +31,8 @@
 
     # make this exec a script, which opens a tmux session (same name), so the state persists
     # Ctrl+b, t: Quick CLI in current working directory
-    bind-key t display-popup -E -w 80% -h 80% -d '#{pane_current_path}'
+    # bind-key t display-popup -E -w 80% -h 80% -d '#{pane_current_path}'
+    bind-key t display-popup -E -w 80% -h 80% -d '#{pane_current_path}' 'tmux-quick-cli'
 
     # Ctrl+b, m: rmpc (Music Player Daemon Client) in current working directory
     bind-key m display-popup -E -w 90% -h 90% -d '#{pane_current_path}' 'ncmpcpp'
