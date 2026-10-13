@@ -6,6 +6,16 @@
     vimAlias = true;
 
     initLua = ''
+
+      -- Transparent neovim, set after colorscheme
+      local function set_transparent()
+        vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+        vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+        -- Add other groups if needed, like SignColumn or LineNr
+        vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
+        vim.api.nvim_set_hl(0, "LineNr", { bg = "none" })
+      end
+
       vim.opt.number = true
       -- vim.opt.wrap = false
       vim.opt.wrap = true -- temporary
@@ -98,6 +108,7 @@
 
       -- Plugin setup/config
       vim.cmd("colorscheme vague")
+      set_transparent()
 
       -- require("mini.pick").setup() -- Replaced by telescope.nvim
       require("mini.completion").setup()
