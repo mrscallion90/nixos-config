@@ -64,18 +64,26 @@
       -- Plugin load
       vim.pack.add(
         {
+          -- Depedency
+      	  {src='https://github.com/nvim-mini/mini.diff', version="stable"},   -- mini.git
+      	  {src='https://github.com/nvim-mini/mini.notify', version="stable"}, -- mini.git
+          {src="https://github.com/nvim-lua/plenary.nvim"},                   -- telescope.nvim
+
           {src="https://github.com/vague2k/vague.nvim"}, -- Colorscheme
-          {src="https://github.com/neovim/nvim-lspconfig"}, -- Pre-configured LSP settings
-          {src="https://github.com/stevearc/oil.nvim"}, -- Emacs-like file explorer
       	  {src="https://github.com/smoka7/hop.nvim"}, -- Press two characters first of a word to jump to
+          {src="https://github.com/neovim/nvim-lspconfig"}, -- Pre-configured LSP settings
+          {src="https://github.com/jake-stewart/multicursor.nvim"},
+
+          {src="https://github.com/stevearc/oil.nvim"}, -- Emacs-like file explorer
+          {src="https://github.com/nvim-telescope/telescope.nvim", version="*"}, -- File, Buffer, Jumplist picker
+
       	  -- Mini series
-          {src="https://github.com/nvim-mini/mini.pick",       version="stable" }, -- File picker and grep picker
-      	  {src="https://github.com/nvim-mini/mini.completion", version="stable"},  -- Auto completion and LSP
+          -- {src="https://github.com/nvim-mini/mini.pick",       version="stable" }, -- File picker and grep picker -- Replaced by telescope.nvim
       	  {src='https://github.com/nvim-mini/mini.comment',    version="stable"},
-      	  {src='https://github.com/nvim-mini/mini.diff',       version="stable"},  -- Required for mini.git
-      	  {src='https://github.com/nvim-mini/mini.notify',     version="stable"},  -- Required for mini.git
+      	  {src='https://github.com/nvim-mini/mini.completion',    version="stable"}, -- Completion
       	  {src='https://github.com/nvim-mini/mini-git',        version="stable"},   -- Productivity, maybe? I am used to lazygit
           {src = 'https://github.com/nvim-mini/mini.icons',    version = 'stable' }, -- Icons since I am lazy to install that system-wide
+      	  {src='https://github.com/nvim-mini/mini.pairs',    version="stable"},
 
           -- FYP College Todo/Meeting Minutes requirement
       	  {src='https://github.com/nvim-treesitter/nvim-treesitter'}, -- Depedency for render-markdown
@@ -84,8 +92,6 @@
 
           -- [TODO] https://github.com/jake-stewart/multicursor.nvim -- add this guy later
           -- Also find org mode for neovim
-          -- Replace mini.pick Telescope.nvim to switch between files, jumps, and buffers. 
-          -- Get blink.nvim as well
         }
       )
 
@@ -93,26 +99,33 @@
       -- Plugin setup/config
       vim.cmd("colorscheme vague")
 
-      require("mini.pick").setup()
+      -- require("mini.pick").setup() -- Replaced by telescope.nvim
       require("mini.completion").setup()
       require("mini.diff").setup() -- Required for mini.git
       require("mini.notify").setup() -- Required for mini.git
       require("mini.git").setup()
-      require('mini.comment').setup()
       require('mini.icons').setup()
+      require('mini.pairs').setup()
 
       require("hop").setup()
       require("oil").setup()
+      require("telescope").setup()
+      require("multicursor-nvim").setup()
 
       -- FYP College Todo/Meeting Minutes requirement
       require('render-markdown').setup()
 
-      -- Plugins keybinds
-      map('n', '<leader>f', ':Pick files<CR>')
-      map('n', '<leader>g', ':Pick grep<CR><CR>')
+      map('n', '<leader>f', ':Telescope find_files<CR>')
+      map('n', '<leader>g', ':Telescope live_grep<CR>')
+      map('n', '<leader>b', ':Telescope buffers<CR>')
+
       map('n', '<leader>w', ':HopWord<CR>')
       map('n', '<leader>o', ':Oil<CR>')
 
+      local mc = require("multicursor-nvim")
+      map({"n", "x"}, "C", function() mc.lineAddCursor(1) end)
+      map({"n"     }, "s", function() mc.matchAddCursor(1) end)
+      map({"n", "x"}, ",", function() mc.clearCursors()   end)
 
       -- LSP Load (nvim-lspconfig)
       -- LSP is installed using Home Manager
