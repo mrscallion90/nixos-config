@@ -99,9 +99,10 @@
       	  {src='https://github.com/nvim-treesitter/nvim-treesitter'}, -- Depedency for render-markdown
       	  {src='https://github.com/MeanderingProgrammer/render-markdown.nvim'},
           -- https://github.com/epwalsh/obsidian.nvim -- Not sure if this is needed
-
-          -- [TODO] https://github.com/jake-stewart/multicursor.nvim -- add this guy later
-          -- Also find org mode for neovim
+          
+          -- https://github.com/nvim-mini/mini.files
+          -- https://github.com/nvim-mini/mini.snippets
+          -- Watch the videos on their README when wifi is fast enough
         }
       )
 
