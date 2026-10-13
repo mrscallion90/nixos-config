@@ -84,6 +84,8 @@
 
           -- [TODO] https://github.com/jake-stewart/multicursor.nvim -- add this guy later
           -- Also find org mode for neovim
+          -- Replace mini.pick Telescope.nvim to switch between files, jumps, and buffers. 
+          -- Get blink.nvim as well
         }
       )
 
