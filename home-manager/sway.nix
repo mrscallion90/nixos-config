@@ -216,9 +216,11 @@ in
           # "HDMI-A-1"
         ];
 
-        modules-left = [ "sway/workspaces" ];
-        modules-center = [
+        modules-left = [ 
+          "sway/workspaces" 
           "mpd"
+        ];
+        modules-center = [
           "clock"
         ];
         modules-right = [
@@ -264,7 +266,8 @@ in
 
         clock = {
           format = "{:%H:%M}";
-          tooltip-format = "{:%A, %d %B %Y}";
+          tooltip-format = "<tt><small>{calendar}</small></tt>";
+          # tooltip-format = "{:%a, %d %b %y}";
         };
 
         wireplumber = {
