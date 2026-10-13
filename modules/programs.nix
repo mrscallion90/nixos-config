@@ -1,4 +1,24 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
+let # not in nixpkgs, and TPM is a mess so here were are ig, might as well make tmux.nix at this point
+  fzf-pane-switch = pkgs.stdenvNoCC.mkDerivation {
+    pname = "fzf-pane-switch";
+    version = "2.1.0";
+
+    src = pkgs.fetchFromGitHub {
+      owner = "Kristijan";
+      repo = "fzf-pane-switch.tmux";
+      rev = "v2.1.0";
+      hash = "sha256-fpgvCRpiqjDLq9xVCgu/QooxCSurLMj8gv/UOOEGpuY=";
+    };
+
+    dontBuild = true;
+
+    installPhase = ''
+      mkdir -p $out/share/tmux-plugins/fzf-pane-switch
+      cp -r . $out/share/tmux-plugins/fzf-pane-switch/
+    '';
+  };
+in
 {
 
   # Shell scripts
@@ -16,10 +36,13 @@
     # set -g @tmux_power_theme 'snow'
     set -g @tmux_power_theme 'moon'
 
+    set -g @fzf_pane_switch_bind-key "C-f"
+
     # No TPM, NixOS does it this way
     run-shell ${pkgs.tmuxPlugins.resurrect}/share/tmux-plugins/resurrect/resurrect.tmux
     run-shell ${pkgs.tmuxPlugins.continuum}/share/tmux-plugins/continuum/continuum.tmux
     run-shell ${pkgs.tmuxPlugins.power-theme}/share/tmux-plugins/power/tmux-power.tmux
+    run-shell ${fzf-pane-switch}/share/tmux-plugins/fzf-pane-switch/select_pane.tmux
 
     set-option -g status-position top
     set -g mouse on
