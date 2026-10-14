@@ -10,6 +10,7 @@
 
     # School
     wine #davinci look
+    typst
 
     #iot
     cisco-packet-tracer_9
