@@ -25,8 +25,13 @@
       vim.opt.expandtab = true
       vim.opt.swapfile = false
       vim.opt.signcolumn = "yes"
-      vim.cmd(":hi statusline guibg=NONE") -- Transparent status line
       vim.g.mapleader=" "
+
+      -- Status bar
+      vim.cmd(":hi statusline guibg=NONE") -- Transparent status line
+      -- vim.opt.laststatus = 0 -- hide bottom status bar
+      -- vim.opt.winbar = "%f %m %= %l:%c" -- top status bar : [Filename] [Modified flag] [Right-aligned line:column]
+      -- vim.opt.cmdheight = 0 -- Another part of status bar hidden until needed
 
       -- Keybinds
       -- Helix-like keybinds
@@ -47,6 +52,7 @@
       map("n", "gs", "^", { desc = "First word of line" })
       map("n", "ge", "G", { desc = "End of file" })
       map("n", "gg", "gg", { desc = "Start of file" })
+      map("n", "<leader>y", 'ggVG"+y', { desc = "Yank file to System Clipboard" })
 
       -- LSP actions
       map("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
@@ -58,8 +64,8 @@
       -- Diagnostics
       vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic", })
       vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic", })
-      vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show diagnostic", })
-      vim.keymap.set("n", "<leader>D", vim.diagnostic.setloclist, { desc = "Show file diagnostics", })
+      -- vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show diagnostic", })
+      -- vim.keymap.set("n", "<leader>D", vim.diagnostic.setloclist, { desc = "Show file diagnostics", }) -- Replaced by Telescope
 
       -- sh (helix), read shell output into buffer
       vim.api.nvim_create_user_command(
@@ -119,10 +125,13 @@
       require('mini.icons').setup()
       require('mini.pairs').setup()
 
+      -- Extend misc features
       require("hop").setup()
-      require("oil").setup()
-      require("telescope").setup()
       require("multicursor-nvim").setup()
+
+      -- File navigation
+      require("oil").setup()
+      require('telescope').setup()
 
       -- FYP College Todo/Meeting Minutes requirement
       require('render-markdown').setup()
@@ -130,6 +139,7 @@
       map('n', '<leader>f', ':Telescope find_files<CR>')
       map('n', '<leader>g', ':Telescope live_grep<CR>')
       map('n', '<leader>b', ':Telescope buffers<CR>')
+      map('n', '<leader>d', ':Telescope diagnostics<CR>')
 
       map('n', '<leader>w', ':HopWord<CR>')
       map('n', '<leader>o', ':Oil<CR>')
