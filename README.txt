@@ -1,3 +1,9 @@
+Switched to fedora
+its a pain in the ass how the packages are outdated
+lots of packages my ass
+and its a pain in the ass to use
+so we going private for this repo or not
+
 NO MORE VIBECODING OR OPENCODE BRAINROT
 I CAN FEEL MY DOPAMINE FRIED
 try to write organic brain made code
