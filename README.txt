@@ -3,6 +3,7 @@ its a pain in the ass how the packages are outdated
 lots of packages my ass
 and its a pain in the ass to use
 so we going private for this repo or not
+and alot of bloat it has
 
 NO MORE VIBECODING OR OPENCODE BRAINROT
 I CAN FEEL MY DOPAMINE FRIED
