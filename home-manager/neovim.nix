@@ -156,6 +156,7 @@
           "superhtml",
       	  "pyright",
       	  "nimlangserver",
+          "tinymist",
         }
       )
     '';

@@ -14,10 +14,6 @@
 
     #iot
     cisco-packet-tracer_9
-    # (python313.withPackages (python-pkgs: with python-pkgs; [
-    #   # select Python packages here
-    #   psutil
-    # ]))
 
     #fyp
     blender godot_4_7 # u just change godot version manually
@@ -60,6 +56,7 @@
     nim nimble # dnd-nim
     # Neovim LSP
     superhtml pyright nimlangserver
+    tinymist # typst
 
     # Cool magic system stuff
     lean4
@@ -68,5 +65,11 @@
     lutris protonplus
     rpcs3
     # we use flatpak for steam instead
+
+    
+    (python313.withPackages (python-pkgs: with python-pkgs; [
+      # select Python packages here
+      pillow tkinter # Certificate Generator
+    ]))
   ];
 }
