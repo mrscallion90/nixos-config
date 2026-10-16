@@ -4,5 +4,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Generation entries in bootloader limited to ...
   boot.loader.systemd-boot.configurationLimit = 10;
 }

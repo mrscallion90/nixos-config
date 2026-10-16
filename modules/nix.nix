@@ -6,6 +6,7 @@
   # Unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # nix store optimised during every build
   nix.settings.auto-optimise-store = true;
 
   # Garbage collector
