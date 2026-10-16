@@ -1,3 +1,11 @@
+Deadass, the Wifi Admin, could have blocked any device connecting with unknown hostname/device wifi name
+on your access point (ie your floor and room)
+He doesnt block my mac address since its randomized anymore
+He uses the void of data (lack of name) and the access point...
+Why is he so fucking smart? Also, why cant I update shit on the wifi included in my hostel room fee...
+
+Fuck my chud chungus life
+
 Switched to fedora
 its a pain in the ass how the packages are outdated
 lots of packages my ass
