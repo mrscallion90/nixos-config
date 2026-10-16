@@ -4,8 +4,8 @@ lots of packages my ass
 and its a pain in the ass to use
 so we going private for this repo or not
 and alot of bloat it has
-ok nevermind, fedora uses 90 GB
-it was 10 GB before for fresh install
+(false alarm, i thought fedora uses 90 GB or sumn)
+that was the game, fedora uses 10 GB (for now)
 
 NO MORE VIBECODING OR OPENCODE BRAINROT
 I CAN FEEL MY DOPAMINE FRIED
