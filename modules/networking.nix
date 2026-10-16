@@ -8,13 +8,19 @@
 
     # Device MAC Address spoofing
     settings = {
+      main = {
+        "dhcp" = "internal";
+      };
       device = {
         "wifi.scan-rand-mac-address" = true;
       };
 
       connection = {
+        "ipv4.dhcp-send-hostname=false";
+        "ipv6.dhcp-send-hostname=false";
         "wifi.cloned-mac-address" = "random";
         "ethernet.cloned-mac-address" = "random";
+        "match-device" = "type:wifi";
       };
     };
   };
