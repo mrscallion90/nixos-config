@@ -1,3 +1,9 @@
+https://www.youtube.com/watch?v=_R1odY2EW_o
+Maybe better code structure/design? (Dendritic NixOs)
+
+Thinking back, he whitelisted some websites
+since steam download is fast but package manager download is slow and downloading isos as well
+
 Deadass, the Wifi Admin, could have blocked any device connecting with unknown hostname/device wifi name
 on your access point (ie your floor and room)
 He doesnt block my mac address since its randomized anymore
