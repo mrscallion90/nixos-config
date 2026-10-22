@@ -65,11 +65,5 @@
     lutris protonplus
     rpcs3
     # we use flatpak for steam instead
-
-    
-    (python313.withPackages (python-pkgs: with python-pkgs; [
-      # select Python packages here
-      pillow tkinter # Certificate Generator
-    ]))
   ];
 }
