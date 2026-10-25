@@ -1,6 +1,7 @@
 https://www.youtube.com/watch?v=_R1odY2EW_o
 Maybe better code structure/design? (Dendritic NixOs)
 https://youtu.be/aNgujRXDTdE
+https://m.youtube.com/watch?v=k2shdqbPT7g
 
 Thinking back, he whitelisted some websites
 since steam download is fast but package manager download is slow and downloading isos as well
